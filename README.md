@@ -20,4 +20,4 @@
 
 * This app is already deployed on the Netlify. So, You may find the live running app using the below given url.
 
-* url => https://6575d2ee096c79341c7346fc--bright-salmiakki-25bc34.netlify.app/
+* url => https://metta-social-app-react.netlify.app/

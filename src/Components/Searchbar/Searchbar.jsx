@@ -12,18 +12,17 @@ function Searchbar() {
         if(query==='') {
             fetch('https://restcountries.com/v3.1/currency/inr')
             .then(res => res.json())
-            .then(data => setResult(data));
-
+            .then(data => setResult(data))
         } else {
             fetch(`https://restcountries.com/v3.1/currency/${query}`)
             .then(res => res.json())
             .then((data) => {
-                if(data.message) {
-                    setResult([]);
+                if(data.message==='Not Found') {
+                    setResult([])
                 } else {
                     setResult(data)
                 }
-            });
+            })
         }
     }, [query]);
 
