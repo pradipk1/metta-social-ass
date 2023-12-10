@@ -30,6 +30,8 @@ function Searchbar() {
   return (
     <div className='searchbarCont'>
 
+        <h2 className='h2tag'>Search Country by Currency Code or Currency Name</h2>
+
         <div className='inputCont'>
             <div>
                 <img src={searchicon} alt="" />

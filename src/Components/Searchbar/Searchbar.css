@@ -2,11 +2,16 @@
     padding: 20px;
 }
 
+.h2tag {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .inputCont {
     padding: 10px;
     width: 500px;
     margin: auto;
-    margin-top: 100px;
 }
 .inputCont>div {
     display: flex;
@@ -61,6 +66,9 @@
     .inputCont {
         width: 400px;
     }
+    .h2tag {
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 530px) {
@@ -69,6 +77,10 @@
     }
     .inputCont {
         width: 300px;
+    }
+    .h2tag {
+        margin-top: 30px;
+        font-size: 20px;
     }
 }
 
@@ -90,5 +102,9 @@
     }
     .inputCont>div>img {
         width: 25px;
+    }
+    .h2tag {
+        margin-top: 10px;
+        font-size: 16px;
     }
 }
