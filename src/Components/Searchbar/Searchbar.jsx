@@ -9,11 +9,15 @@ function Searchbar() {
     const [result, setResult] = useState([]);
 
     useEffect(() => {
+
         if(query==='') {
             fetch('https://restcountries.com/v3.1/currency/inr')
             .then(res => res.json())
             .then(data => setResult(data))
-        } else {
+            return;
+        }
+        
+        const timerId = setTimeout(() => {
             fetch(`https://restcountries.com/v3.1/currency/${query}`)
             .then(res => res.json())
             .then((data) => {
@@ -23,7 +27,10 @@ function Searchbar() {
                     setResult(data)
                 }
             })
-        }
+        }, 1000);
+
+        return () => clearInterval(timerId);
+        
     }, [query]);
 
   return (
